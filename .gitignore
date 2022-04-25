@@ -4,5 +4,5 @@ tmp/*
 
 .idea
 videos
-*/solution
-*/solutions
+module01/solution/
+module02/solutions/
