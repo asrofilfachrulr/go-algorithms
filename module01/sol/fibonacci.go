@@ -38,7 +38,7 @@ func Fibonacci(n int) int {
 	}
 	return cur
 
-	// Note: There are many possible solutions to this problem.
+	// Note: There are many possible sol to this problem.
 	// We will end up exploring most of them in this course. Below
 	// is another viable solution using a technique called recursion.
 	// return Fibonacci(n-1) + Fibonacci(n-2)
