@@ -2,8 +2,6 @@ package module01
 
 import (
 	"fmt"
-	"strconv"
-	"strings"
 )
 
 // FizzBuzz will print out all of the numbers
@@ -17,19 +15,22 @@ import (
 // I wouldn't normally recommend this, but did
 // it here to make life easier for beginners.
 func FizzBuzz(n int) {
-	res := []string{}
-
 	for i := 1; i <= n; i++ {
-		if i%3 == 0 && i%5 == 0 {
-			res = append(res, "Fizz Buzz")
-		} else if i%3 == 0 {
-			res = append(res, "Fizz")
-		} else if i%5 == 0 {
-			res = append(res, "Buzz")
-		} else {
-			res = append(res, strconv.Itoa(i))
+		switch {
+		case i%3 == 0 && i%5 == 0:
+			fmt.Print("Fizz Buzz")
+		case i%3 == 0:
+			fmt.Print("Fizz")
+		case i%5 == 0:
+			fmt.Print("Buzz")
+		default:
+			fmt.Print(i)
+		}
+
+		if i != n {
+			fmt.Print(", ")
 		}
 	}
 
-	fmt.Println(strings.Join(res, ", "))
+	fmt.Println()
 }

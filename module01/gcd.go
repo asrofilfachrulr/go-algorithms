@@ -1,5 +1,9 @@
 package module01
 
 func GCD(a, b int) int {
-	return 0
+	if b == 0 {
+		return a
+	}
+
+	return GCD(b, (a % b))
 }
